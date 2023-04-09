@@ -25,17 +25,17 @@ function App() {
     }}
         templateColumns={{
             base: '1fr',
-            lg: '200px 1fr'
+            lg: '250px 1fr'
         }}
     >
         <GridItem area='nav'><NavBar onSearch={(searchText) => setGameQuery({ ...gameQuery, searchText })} /></GridItem>
         <Show above='lg'>
-            <GridItem area='aside' paddingX={5}>
-                <GenreList selectedGenre={gameQuery.genre} onSelectGenre={(genre) => setGameQuery({ ...gameQuery, genre })} />
+            <GridItem area='aside' paddingX={5} >
+                <GenreList  selectedGenre={gameQuery.genre} onSelectGenre={(genre) => setGameQuery({ ...gameQuery, genre })} />
             </GridItem>
         </Show>
         <GridItem area='main' >
-            <Box paddingLeft={2}>
+            <Box paddingLeft={2} margin={2} >
                 <GameHeading gameQuery={gameQuery} />
                 <Flex marginBottom={5}>
                     <Box paddingLeft={5} marginRight={5}>
